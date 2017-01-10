@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
-var mobileapp = angular.module('immobile',[], function($httpProvider){
+var mobileapp = angular.module('immobile',['ui.router']);
+
+mobileapp.config(function ($stateProvider, $urlRouterProvider){
     
 });
