@@ -8,16 +8,19 @@
     <meta name="robots" content="{{ metaservice.metaKeywords() }}" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 <script src="scripts/app.js"></script>
-<base href="/" />
+
 <body ng-controller="myCtrl">
-
-<div ng-app="">
- 
-
+    <style>.wrapper {position: relative;background: #f1f1f1;right: 0;transition: all 400ms ease 0s;width: 100% !important;min-height: 310px;}</style>
+<div class="wrapper"> 
+ <div ng-include="'header.html'"></div>
+ <div ng-include="'footer.html'"></div>
 
 </div>
+
+
+
 
 </body>
 </html>

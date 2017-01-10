@@ -1,4 +1,20 @@
- var app = angular.module('app',[]);
+ var app = angular.module('app',['ngRoute']);
+ 
+ app.config( function($routeProvider, $locationProvider){
+     $routeProvider
+            
+		.when('/product', {
+			templateUrl: 'modules/templates/products.html',
+			controller: 'productController'
+		})
+           
+                $locationProvider.html5Mode({
+  enabled: true,
+  requireBase: false
+});
+ });
+ 
+ 
     app.service('MetaService', function() {
        var title = '';
        var metaKeywords = '';
@@ -16,3 +32,6 @@
       $rootScope.metaservice = MetaService;
       $rootScope.metaservice.set("IndiaMART Mobile Site - Products Seller","noindex,nofollow");
    });
+   
+   
+  
