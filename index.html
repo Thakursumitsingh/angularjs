@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html ng-app="immobile" id="ng-app">
-<head>
-   <meta name="theme-color" content="#392191">
+<html ng-app="app">
+    <meta name="theme-color" content="#392191">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="en" /> 
-       <link rel="icon" sizes="192x192" href="http://m.imimg.com/gifs/im192.png">
-          <base href="http://m.indiamart.com/my/" />
-          <title>IndiaMART Mobile Site - Products Seller</title> 
-          <meta name="robots" content="noindex,nofollow" />
-          <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' /> 
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-route.min.js"></script>
-    </head>
-    <body>
-      <script src="scripts/app.js"></script>
-        <div>TODO write content</div>
-    </body>
+    <meta name="language" content="en" />
+    <link rel="icon" sizes="192x192" href="http://m.imimg.com/gifs/im192.png">
+    <title ng-bind="metaservice.metaTitle()">{{metaservice.metaTitle()}}</title>
+    <meta name="robots" content="{{ metaservice.metaKeywords() }}" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="scripts/app.js"></script>
+<base href="/" />
+<body ng-controller="myCtrl">
+
+<div ng-app="">
+ 
+
+
+</div>
+
+</body>
 </html>

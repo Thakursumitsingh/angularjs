@@ -1,11 +1,18 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ var app = angular.module('app',[]);
+    app.service('MetaService', function() {
+       var title = '';
+       var metaKeywords = '';
+       return {
+          set: function(newTitle, newKeywords) {
+              metaKeywords = newKeywords;
+              title = newTitle; 
+          },
+          metaTitle: function(){ return title; },
+          metaKeywords: function() { return metaKeywords; }
+       }
+    });
 
-var mobileapp = angular.module('immobile',['ui.router']);
-
-mobileapp.config(function ($stateProvider, $urlRouterProvider){
-    
-});
+   app.controller('myCtrl',function($scope,$rootScope,MetaService){
+      $rootScope.metaservice = MetaService;
+      $rootScope.metaservice.set("IndiaMART Mobile Site - Products Seller","noindex,nofollow");
+   });
